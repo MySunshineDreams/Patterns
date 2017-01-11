@@ -10,7 +10,8 @@ public class SingletonTest {
 
 	public static void main(String[] args) {
 		//lazySingletonTest();
-		hungrySingletonTest();
+		//hungrySingletonTest();
+		innerSingletonTest();
 	}
 
 	private static void lazySingletonTest() {
@@ -39,6 +40,25 @@ public class SingletonTest {
 				System.out.println(field.getName());
 			}
 			System.out.println(HungrySingleton.getInstance());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void innerSingletonTest() {
+		try {
+			InnerSingleton innerSingleton = InnerSingleton.getInstance();
+			System.out.println(innerSingleton);
+			Class<?>[] classes = innerSingleton.getClass().getDeclaredClasses();
+			for (Class<?> clazz : classes) {
+				if (clazz.getName().equals("Singleton")) {
+					Field[] fields = clazz.getDeclaredFields();
+					for (Field field : fields) {
+						field.setAccessible(true);
+						System.out.println(field.getName());
+					}
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
