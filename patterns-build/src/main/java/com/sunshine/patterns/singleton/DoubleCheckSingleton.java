@@ -6,7 +6,7 @@ package com.sunshine.patterns.singleton;
  */
 public class DoubleCheckSingleton {
 
-	private static DoubleCheckSingleton doubleCheckSingleton;
+	private volatile static DoubleCheckSingleton doubleCheckSingleton;
 
 	private DoubleCheckSingleton() {
 
