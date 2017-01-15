@@ -4,6 +4,7 @@ import com.sunshine.patterns.strategy.Strategy.Push;
 
 /**
  * Created by <sunshine> mysunshinedreams@163.com on 2017/1/10 0010.
+ * 策略模式——环境类
  */
 public class PushContext {
 	/**

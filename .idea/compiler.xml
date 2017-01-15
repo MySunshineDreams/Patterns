@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/patterns-build/src/main/java/com/sunshine/patterns/chain/ChannelProcessor.java" />
+      <file url="file://$PROJECT_DIR$/patterns-build/src/main/java/com/sunshine/patterns/chain/SystemProcessor.java" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -11,9 +15,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
-      <module name="patterns" target="1.7" />
-      <module name="patterns-bean" target="1.7" />
-      <module name="patterns-build" target="1.7" />
+      <module name="patterns" target="1.8" />
+      <module name="patterns-bean" target="1.8" />
+      <module name="patterns-build" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,6 +1,6 @@
 package com.sunshine.patterns.chain;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.*;
 
 /**
  * Created by <sunshine> mysunshinedreams@163.com on 2017/1/13 0013.

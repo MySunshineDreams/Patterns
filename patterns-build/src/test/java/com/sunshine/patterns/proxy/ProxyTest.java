@@ -1,4 +1,4 @@
-package com.sunshine.patterns.pattern;
+package com.sunshine.patterns.proxy;
 
 import com.sunshine.patterns.proxy.*;
 
@@ -19,8 +19,8 @@ public class ProxyTest {
 	 */
 	private static void staticProxyTest() {
 		AppointPush appointPush = new AppointPush();
-		AppointPushProxy appointPushProxy = new AppointPushProxy(appointPush);
-		appointPushProxy.appintPush();
+		AppointPushProxy appointPushProxy = new AppointPushProxy();
+		appointPushProxy.push();
 	}
 
 	/**
@@ -29,10 +29,10 @@ public class ProxyTest {
 	private static void jdkProxyTest() {
 		Push push = new FullAmountPush();
 		JDKPushProxy proxy = new JDKPushProxy(push);
-		Push pushProxy = (Push) proxy.getProxy();
+		Push pushProxy = proxy.getProxy();
 		pushProxy.push();
 		proxy = new JDKPushProxy(new DistrictPush());
-		pushProxy = (Push) proxy.getProxy();
+		pushProxy = proxy.getProxy();
 		pushProxy.push();
 	}
 
@@ -41,9 +41,9 @@ public class ProxyTest {
 	 */
 	private static void cglibProxyTest() {
 		CglibPushProxy proxy = new CglibPushProxy();
-		WebspherePush webspherePush = (WebspherePush) proxy.getProxy(WebspherePush.class);
+		Push webspherePush = proxy.getProxy(WebspherePush.class);
 		webspherePush.push();
-		FullAmountPush fullAmountPush = (FullAmountPush) proxy.getProxy(FullAmountPush.class);
+		Push fullAmountPush = proxy.getProxy(FullAmountPush.class);
 		fullAmountPush.push();
 	}
 }
