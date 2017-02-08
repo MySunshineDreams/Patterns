@@ -1,7 +1,7 @@
 package com.sunshine.patterns.bridge;
 
 /**
- * Created by sks on 2017/1/17 0017.
+ * Created by <sunshine> mysunshinedreams@163.com on 2017/1/17 0017.
  * 桥接模式——扩展抽象类
  */
 public class FullAmountPush extends Push {
