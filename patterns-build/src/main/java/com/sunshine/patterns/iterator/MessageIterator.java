@@ -15,7 +15,7 @@ public class MessageIterator implements AbstractIterator {
     public MessageIterator(MessageList messageList) {
         this.messageList = messageList;
         this.messages = messageList.all();
-        this.head = 0;
+        this.head = -1;
         this.tail = messages.size() - 1;
     }
 
