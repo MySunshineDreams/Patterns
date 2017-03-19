@@ -2,6 +2,7 @@ package com.sunshine.patterns.status;
 
 /**
  * Created by <sunshine> mysunshinedreams@163.com on 2017/1/23.
+ * 状态模式——具体状态
  */
 public class ForbidStatus extends Status {
     public ForbidStatus(Account account) {
