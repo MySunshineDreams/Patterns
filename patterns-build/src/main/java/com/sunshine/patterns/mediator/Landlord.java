@@ -12,6 +12,5 @@ public class Landlord extends Person {
     @Override
     public void looking(String request) {
         this.message = request;
-        this.mediator.notification(request);
     }
 }

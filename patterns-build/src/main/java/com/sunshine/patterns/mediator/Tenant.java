@@ -6,12 +6,11 @@ package com.sunshine.patterns.mediator;
 public class Tenant extends Person {
     @Override
     public void lease(String request) {
-
+		
     }
 
     @Override
     public void looking(String request) {
         this.message = request;
-        this.mediator.notification(request);
     }
 }
